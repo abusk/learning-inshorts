@@ -8,7 +8,8 @@ Encoding and decoding are fundamental processes in computer science and informat
 
 ### Common Types of Encoding:
 
-1. **ASCII Encoding**: ASCII (American Standard Code for Information Interchange) is a character encoding standard that represents text in computers. It uses seven bits to represent each character, allowing for a total of 128 different characters.
+#### 1. ASCII Encoding:
+ASCII (American Standard Code for Information Interchange) is a character encoding standard that represents text in computers. It uses seven bits to represent each character, allowing for a total of 128 different characters.
 
 ```text
 Here are the ASCII values for the characters 'a', 'b', and 'c':
@@ -25,7 +26,8 @@ print("Encoded ASCII Text:", encoded_ascii_text)
 decoded_ascii_text = encoded_ascii_text.decode('ascii')  # Decode ASCII byte string to ASCII text
 print("Decoded ASCII Text:", decoded_ascii_text) # Output: Hello World!
 ```
-2. **Unicode Encoding**: Unicode is a character encoding standard that aims to represent every character from every language in the world. It supports a much larger range of characters compared to ASCII and is commonly used for internationalization and multilingual applications.
+#### 2. Unicode Encoding: 
+Unicode is a character encoding standard that aims to represent every character from every language in the world. It supports a much larger range of characters compared to ASCII and is commonly used for internationalization and multilingual applications.
 ```text
 'a': U+0061 (hexa), 01100001 (binary)
 'b': U+0061 (hexa), 01100010 (binary)
@@ -40,10 +42,11 @@ print("Encoded Unicode Text:", encoded_unicode_text)
 decoded_unicode_text = encoded_unicode_text.decode('utf-8')  # Decode UTF-8 byte string to Unicode text
 print("Decoded Unicode Text:", decoded_unicode_text)
 ```
-3. **Base64 Encoding**: Base64 encoding is a method of encoding **binary data** into ASCII characters. It is commonly used for encoding binary data in text-based formats, such as email attachments or data transmitted over HTTP.
+#### 3. Base64 Encoding: 
+Base64 encoding is a method of encoding **binary data** into ASCII characters. It is commonly used for encoding binary data in text-based formats, such as email attachments or data transmitted over HTTP.
 ```html
 Base64 encoding of "Hello"  is "SGVsbG8="
-How: 
+
 Binary representation of Hello: 01001000 01100101 01101100 01101100 01101111
 Base64 group the binary string using 6 bits (2^6 == 64): 010010 000110 010101 101100 011011 000110 1111 
 The last group needs two more bits as padding. Base64 encoding uses '=' at the end to identify if it needs padding. Each '=' adds 2 padding bits.
@@ -54,7 +57,7 @@ The Base64 character are
 52-61 -> 0-9
 62-63 -> + /
 And Padding is '='
-Based on the character list : 
+Based on the Base64 character list : 
 010010 -> S
 000110 -> G
 010101 -> V
@@ -62,7 +65,6 @@ Based on the character list :
 011011 -> b
 000110 -> G
 111100 -> 8
-and for two bits padding added '='
 ```
 ```python
 import base64
@@ -74,7 +76,8 @@ print(encoded_data.decode('utf-8'))  # Output: SGVsbG8="
 decoded_data = base64.b64decode(encoded_data)
 print(decoded_data.decode('utf-8'))  # Output: Hello
 ```
-4. **URL Encoding**: URL encoding is a method used to encode special characters in URLs (Uniform Resource Locators) into a format that can be transmitted over the internet. It replaces non-alphanumeric characters with a '%' followed by two hexadecimal digits representing the character's ASCII value.
+#### 4. URL Encoding: 
+URL encoding is a method used to encode special characters in URLs (Uniform Resource Locators) into a format that can be transmitted over the internet. It replaces non-alphanumeric characters with a '%' followed by two hexadecimal digits representing the character's ASCII value.
 
 ```html
 1. Identify Special Characters: URLs may contain special characters such as spaces, punctuation marks, and non-alphanumeric characters like &, =, ?, #, etc.
